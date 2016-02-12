@@ -1,4 +1,4 @@
-package Spring.Gradle;
+package spring.gradle;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
