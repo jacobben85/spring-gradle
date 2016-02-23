@@ -1,9 +1,7 @@
 package spring.gradle.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import spring.gradle.objects.Employee;
 import spring.gradle.repository.EmployeeRepo;
