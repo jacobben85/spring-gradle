@@ -24,7 +24,7 @@ public class Employee {
     private String firstName; // to be added
     private String lastName; // to be added
 
-    private String displayName; // batch calculation
+    private String displayName; // batch calculation first name + last name
 
     public void setId(long id) {
         this.id = id;
