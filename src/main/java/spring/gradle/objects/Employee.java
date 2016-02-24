@@ -24,6 +24,8 @@ public class Employee {
     private String firstName;
     private String lastName;
 
+    private String displayName;
+
     public void setId(long id) {
         this.id = id;
     }
@@ -46,6 +48,26 @@ public class Employee {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public boolean updateDisplayName() {
+        boolean updated = false;
+        if (this.lastName != null && this.firstName != null) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(this.firstName);
+            sb.append(" ");
+            sb.append(this.lastName);
+
+            if (!sb.toString().equals(this.displayName)) {
+                this.displayName = sb.toString();
+                updated = true;
+            }
+        }
+        return updated;
     }
 
     @Override

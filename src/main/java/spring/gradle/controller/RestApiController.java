@@ -42,4 +42,11 @@ public class RestApiController {
 
         return employeeList;
     }
+
+    @RequestMapping("/test")
+    public Employee employeeTest() {
+        Employee employee = repo.findFirstByDisplayNameIsNull();
+
+        return employee;
+    }
 }

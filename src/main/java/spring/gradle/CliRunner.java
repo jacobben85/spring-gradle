@@ -30,6 +30,7 @@ public class CliRunner implements CommandLineRunner {
                     employee.setFirstName("first name of :" + i);
                     employee.setLastName("last name of :" + i);
                     repo.save(employee);
+                    LOGGER.info("created : " + employee.toString());
                 }
             }
         }

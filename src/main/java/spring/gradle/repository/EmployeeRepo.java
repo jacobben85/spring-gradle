@@ -7,4 +7,5 @@ import spring.gradle.objects.Employee;
  * Employee repo
  */
 public interface EmployeeRepo extends CrudRepository<Employee, Long> {
+    Employee findFirstByDisplayNameIsNull();
 }
