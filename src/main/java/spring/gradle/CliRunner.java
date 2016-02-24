@@ -25,10 +25,19 @@ public class CliRunner implements CommandLineRunner {
         for (String option : args) {
             sb.append(" ").append(option);
             if (option.startsWith("preload")) {
-                for (int i=1; i <= 10; i++) {
+
+                int count = 0;
+                try {
+                    String[] parts = option.split("=");
+                    count = Integer.parseInt(parts[1]);
+                } catch (Exception e) {
+                    LOGGER.error("Something went wrong reading options", e);
+                }
+
+                for (int i=1; i <= count; i++) {
                     Employee employee = new Employee();
-                    employee.setFirstName("first name of :" + i);
-                    employee.setLastName("last name of :" + i);
+                    employee.setFirstName("first name " + i);
+                    employee.setLastName("last name " + i);
                     repo.save(employee);
                     LOGGER.info("created : " + employee.toString());
                 }
