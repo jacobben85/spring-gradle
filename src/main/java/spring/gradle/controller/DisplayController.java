@@ -20,17 +20,20 @@ public class DisplayController {
     @Autowired
     private EmployeeRepo repo;
 
+    // webjar demo
     @RequestMapping("/")
     String index() {
         return "default";
     }
 
+    // add record
     @RequestMapping(value="/employee", method= RequestMethod.GET)
     String employee(Model model) {
         model.addAttribute("employee", new Employee());
         return "employee";
     }
 
+    // store and display
     @RequestMapping(value="/employee", method= RequestMethod.POST)
     String employeeResult(@ModelAttribute Employee employee, Model model) {
         repo.save(employee);
@@ -38,6 +41,7 @@ public class DisplayController {
         return "result";
     }
 
+    // listing
     @RequestMapping("/employees")
     String employeeResult(Model model) {
         Iterable<Employee> list = repo.findAll();

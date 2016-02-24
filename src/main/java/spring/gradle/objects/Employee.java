@@ -20,11 +20,11 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
-    private String firstName;
-    private String lastName;
+    private long id; // auto generated field
+    private String firstName; // to be added
+    private String lastName; // to be added
 
-    private String displayName;
+    private String displayName; // batch calculation
 
     public void setId(long id) {
         this.id = id;

@@ -11,11 +11,15 @@ import java.util.HashMap;
 
 /**
  * Rest controller
+ *
+ * I am sticking with json for the demo
+ * produces=MediaType.APPLICATION_XML_VALUE could generate xml
  */
 @RestController
 @RequestMapping(value = "/rest", produces = {"application/json"})
 public class RestApiController {
 
+    // auto wiring spring magic
     @Autowired
     private EmployeeRepo repo;
 
