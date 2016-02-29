@@ -12,9 +12,9 @@ import org.springframework.batch.item.ItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import spring.gradle.objects.Employee;
-import spring.gradle.utils.BatchProcessor;
-import spring.gradle.utils.BatchReader;
-import spring.gradle.utils.BatchUpdater;
+import spring.gradle.batch.BatchProcessor;
+import spring.gradle.batch.BatchReader;
+import spring.gradle.batch.BatchUpdater;
 
 /**
  * Batch config

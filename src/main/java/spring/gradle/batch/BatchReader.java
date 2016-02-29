@@ -1,6 +1,5 @@
-package spring.gradle.utils;
+package spring.gradle.batch;
 
-import com.sun.media.jfxmedia.logging.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.NonTransientResourceException;
